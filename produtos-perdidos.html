@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/untitled-1.css">
+
+    <title>CAP</title>
+</head>
+<body>
+    <header>
+        
+        <section class="top-header">
+
+            <div class="interface">
+
+                <div class="logo">
+                    <a href="index.html" target="_self">
+                        <img src="imagem/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="btn-social">
+                    <a href="#" target="_self"><button><i class="bi bi-instagram"></i></button></a>
+                    <a href="#" target="_self"><button><i class="bi bi-telephone"></i></button></a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="bottom-header">
+            <div class="interface">
+                <nav>
+                    <ul>
+                        <li><a href="quemsomos.html" target="_self">Quem somos</a></li>
+                        <li><a href="produtos-achados.html" target="_self">Catalago de Achados</a></li>
+                        <li><a href="produtos-perdidos.html" target="_self">Catalago de Perdidos</a></li>
+                </nav>
+            </div>
+        </section>
+       
+    </header>
+
+
+    <section class="catalogo">
+        <h2>Produtos Perdidos</h2>
+        <div id="lista-produtos-perdidos"></div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            carregarProdutosPerdidos();
+        });
+
+        function carregarProdutosPerdidos() {
+            let produtosPerdidos = JSON.parse(localStorage.getItem("produtosPerdidos")) || [];
+            let listaProdutos = document.getElementById("lista-produtos-perdidos");
+            listaProdutos.innerHTML = "";
+
+            produtosPerdidos.forEach((produto, index) => {
+                let cardProduto = document.createElement("div");
+                cardProduto.classList.add("card-produto");
+
+                cardProduto.innerHTML = `
+                    <img src="${produto.imagem}" alt="Imagem do produto">
+                    <h3>${produto.produto}</h3>
+                    <p>${produto.descricao}</p>
+                    <button onclick="removerProdutoPerdido(${index})">Remover</button>
+                `;
+
+                listaProdutos.appendChild(cardProduto);
+            });
+        }
+
+        function removerProdutoPerdido(index) {
+            let produtosPerdidos = JSON.parse(localStorage.getItem("produtosPerdidos")) || [];
+            produtosPerdidos.splice(index, 1);
+            localStorage.setItem("produtosPerdidos", JSON.stringify(produtosPerdidos));
+            carregarProdutosPerdidos();
+        }
+    </script>
+</body>

@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-color: #424147;
+}
+
+.top-header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header{
+    background-color: #84a0fa; 
+    padding: 20px 4%;
+}
+
+.top-header .logo img{
+    max-width: 190px;
+}
+
+.top-header .btn-social button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.bottom-header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    list-style-type: none;
+}
+
+.bottom-header nav ul li a{
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.bottom-header nav ul li a:hover{
+    background-color: #ed6b86;
+    color: #424147;
+    padding: 0px 40px;
+}
+
+.logo-achados img{
+    margin-top: 10px;
+    margin-left: 500px;
+    border-radius: 50px;
+    border: 4px solid black;
+}
+
+.logo-perdidos img{
+    margin-top: 10px;
+    margin-left: 500px;
+    border-radius: 50px;
+    border: 4px solid black;
+}
+
+.texto1{
+   text-indent: 30px;
+}
+
+.titulo1{
+    text-align: center;
+    font-size: 35px;
+}
+
+.subtitulo1{
+    text-align: center;
+}
+
+.logo-achados img,
+.logo-perdidos img {
+    display: block;
+    margin: 20px auto; /* Centraliza e dá espaçamento */
+    border-radius: 50px;
+    border: 4px solid black;
+}
+
+.bottom-header nav ul {
+    gap: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.bottom-header nav ul li a:hover {
+    background-color: #ffffff;
+    color: #424147;
+}
+
+.top-header .btn-social {
+    display: flex;
+    gap: 15px; /* Espaçamento entre botões */
+}
+
+.top-header .btn-social button {
+    margin-left: 10px; /* Afastar os botões */
+}
+
+.logo-achados,
+.logo-perdidos {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 10px; /* Ajuste conforme necessário */
+}
+
+.logo-achados img,
+.logo-perdidos img {
+    border-radius: 50px;
+    border: 4px solid black;
+}
+
+.bottom-header nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem em telas menores */
+    gap: 10px; /* Espaço entre os itens */
+    justify-content: center;
+    padding: 10px;
+}
+
+.logo-achados, .logo-perdidos {
+    display: flex;
+    justify-content: center; /* Centraliza */
+}
+
+.logo-achados img, .logo-perdidos img {
+    width: 100%; /* Para manter responsivo */
+    max-width: 300px; /* Define um limite */
+    border-radius: 50px;
+    border: 4px solid black;
+}
+
+.titulo1 {
+    font-size: 5vw; /* Se adapta ao tamanho da tela */
+    text-align: center;
+}
+
+.subtitulo1 {
+    font-size: 3vw;
+}
+
+@media (max-width: 768px) {
+    /* Ajustar menu para telas pequenas */
+    .bottom-header nav ul {
+        flex-direction: column; /* Empilhar itens */
+        align-items: center;
+    }
+
+    .bottom-header nav ul li a {
+        padding: 10px; /* Reduz tamanho dos links */
+        font-size: 20px;
+    }
+
+    /* Ajustar logos */
+    .logo-achados img, .logo-perdidos img {
+        max-width: 200px; /* Reduzir tamanho em telas menores */
+    }
+
+    /* Ajustar fontes */
+    .titulo1 { font-size: 4vw; }
+    .subtitulo1 { font-size: 2.5vw; }
+}
+
+.logo-achados img, .logo-perdidos img {
+    width: 100%;
+    max-width: 500px; /* Aumenta, mas limita o tamanho */
+    height: auto;
+}
+
+.logo-achados img, .logo-perdidos img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* Mantém a qualidade cortando o excesso */
+    border-radius: 50px;
+    border: 4px solid black;
+}
+
+body {
+    background-color: #ffffff; /* Cor de fundo */
+}
+
+.formulario {
+    width: 100%;
+    max-width: 400px; /* Evita que fique muito largo */
+    margin: 20px auto; /* Centraliza */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    padding: 10px;
+    background-color: #84a0fa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.formulario button:hover {
+    background-color: #d1526b;
+}
+
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Garante altura inicial */
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    max-height: 200px; /* Não cresce além disso */
+    resize: none; /* Impede redimensionamento manual */
+}
+
+/* Centraliza os logos */
+.logo-achados, .logo-perdidos {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se precisar) */
+    margin: 20px 0; /* Espaço entre as seções */
+}
+
+/* Torna as imagens responsivas */
+.logo-achados img, .logo-perdidos img {
+    max-width: 100%; /* Para não ultrapassar o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Centraliza e coloca as imagens lado a lado */
+.logos-container {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    gap: 20px; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+/* Ajusta o tamanho das imagens */
+.logo-item img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+    height: auto; /* Mantém a proporção */
+    width: 450px; /* Define um tamanho fixo (ajuste conforme necessário) */
+}
+
+/* Ajusta tamanho, bordas e quinas arredondadas das imagens */
+.logo-item img {
+    max-width: 100%; /* Garante responsividade */
+    height: auto; /* Mantém a proporção */
+    width: 450px; /* Ajuste conforme necessário */
+    border-radius: 20px; /* Arredonda as quinas */
+    border: 4px solid black; /* Adiciona borda preta */
+}
+
+/* Adiciona margem superior para descolar as imagens do header */
+.logos-container {
+    margin-top: 50px; /* Ajuste conforme necessário */
+}
+
+/* Se preferir adicionar diretamente na imagem */
+.logo-item img {
+    margin-top: 50px; /* Ajuste conforme necessário */
+    max-width: 100%;
+    height: auto;
+    width: 450px;
+    border-radius: 20px;
+    border: 4px solid black;
+}
+
+/* Estilo para as palavras abaixo das imagens */
+.logo-text {
+    text-align: center;  /* Centraliza o texto */
+    font-size: 24px;     /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;   /* Deixa o texto em negrito */
+    margin-top: 10px;    /* Dá um espaçamento entre a imagem e o texto */
+    color: #424147;      /* Define a cor do texto (ajuste conforme necessário) */
+}
+
+/* Estilo do input de arquivo */
+.formulario input[type="file"] {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Estilização da pré-visualização da imagem */
+#preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    padding: 5px;
+}
+
+.catalogo {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.catalogo h2 {
+    margin-bottom: 20px;
+}
+
+#lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-produto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
+}
+
+.card-produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-produto h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.card-produto p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-produto button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.catalogo {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.catalogo h2 {
+    margin-bottom: 20px;
+}
+
+#lista-produtos-perdidos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-produto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
+}
+
+.card-produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-produto h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.card-produto p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-produto button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buscamos{
+    text-align: center;
+}
+
+.registro{
+    text-align: center;
+}
